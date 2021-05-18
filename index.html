@@ -34,7 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 <script>
     window.onload = function() {
-    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem", {
     "method": "GET",
     "headers": {
         "x-rapidapi-key": "adc88802f5msh0791edd1a616084p183d1bjsn736326b1445a",
@@ -47,7 +47,7 @@
             for (let i = 0; i < jsondata.length; i++) {
               const listElement = document.createElement("li");
               listElement.className = "list-group-item";
-              listElement.innerText = `${jasondata[i].name}`};
+              listElement.innerText = `${jasondata[i].title}`};
               list.appendChild(listElement);
             })
 .catch(err => {
