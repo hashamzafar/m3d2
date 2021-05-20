@@ -42,12 +42,11 @@
     }
 })
 .then(response => response.json())
-.then(jasondata => console.log(jasondata))
 .then(jsondata =>  {const list = document.getElementById("myList");
-            for (let i = 0; i < jsondata.length; i++) {
+            for (let i = 0; i < jsondata.data.length; i++) {
               const listElement = document.createElement("li");
               listElement.className = "list-group-item";
-              listElement.innerText = `${jasondata[i].title}`};
+              listElement.innerText = `${jsondata.data[i].title}`};
               list.appendChild(listElement);
             })
 .catch(err => {
